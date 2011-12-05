@@ -22,7 +22,7 @@ public class Hilfe implements Operation {
 		return builder.toString();
 	}
 
-	public void appendBefehl(StringBuilder builder, Befehl befehl) {
+	private void appendBefehl(StringBuilder builder, Befehl befehl) {
 		builder.append(befehl.kommando());
 		builder.append(" (...");
 		builder.append(befehl.beschreibung());
