@@ -34,6 +34,8 @@ public class EinfacherIntepreterTest {
 				{"Schlage Ball", Schlag.class},
 				{"Nächstes Loch", Lochwechsel.class},
 				{"Hilfe", Hilfe.class},
+				{"", Schlag.class},
+				{"    ", Schlag.class},
 				{"blablub", UnbekannteOperation.class},
 				};
 		return Arrays.asList(testData);

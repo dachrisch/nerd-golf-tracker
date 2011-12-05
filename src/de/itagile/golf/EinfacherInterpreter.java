@@ -17,8 +17,8 @@ public class EinfacherInterpreter implements Interpreter {
 
 	@Override
 	public Operation interpretiere(String string) {
-		Operation operation = operationen.get(string);
-		if (null == operation) {
+		Operation operation = operationen.get(string.trim());
+		if(null==operation) {
 			return new UnbekannteOperation();
 		}
 		return operation;
