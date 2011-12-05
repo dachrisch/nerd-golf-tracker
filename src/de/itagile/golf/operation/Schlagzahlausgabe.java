@@ -21,6 +21,6 @@ public class Schlagzahlausgabe implements Operation {
 	}
 
 	private String einheit(int anzahlSchlaege) {
-		return anzahlSchlaege == 1 ? "Schlag" : "Schl√§ge";
+		return anzahlSchlaege == 1 ? "Schlag" : "Schl‰ge";
 	}
 }

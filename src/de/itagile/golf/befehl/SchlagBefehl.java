@@ -16,7 +16,7 @@ public class SchlagBefehl implements Befehl {
 	}
 
 	public String beschreibung() {
-		return "dann zÃ¤hle ich mit";
+		return "dann zähle ich mit";
 	}
 
 }

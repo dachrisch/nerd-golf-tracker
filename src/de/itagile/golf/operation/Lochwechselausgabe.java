@@ -13,6 +13,6 @@ public class Lochwechselausgabe implements Operation {
 
 	@Override
 	public String fuehreAus(Scorecard scorecard) {
-		return "Deine Schlagzahl wurde zurÃ¼ckgesetzt und Du bist " + folgeoperation.fuehreAus(scorecard);
+		return "Deine Schlagzahl wurde zurückgesetzt und Du bist " + folgeoperation.fuehreAus(scorecard);
 	}
 }

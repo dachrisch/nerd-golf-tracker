@@ -12,11 +12,11 @@ public class LochwechselBefehl implements Befehl {
 	}
 
 	public String kommando() {
-		return "NÃ¤chstes Loch";
+		return "Nächstes Loch";
 	}
 
 	public String beschreibung() {
-		return "dann zÃ¤hle ich fÃ¼r das nÃ¤chste Loch mit";
+		return "dann zähle ich für das nächste Loch mit";
 	}
 
 }
