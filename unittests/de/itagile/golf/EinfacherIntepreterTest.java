@@ -14,6 +14,7 @@ import org.junit.runners.Parameterized.Parameters;
 import de.itagile.golf.operation.Hilfe;
 import de.itagile.golf.operation.Lochwechsel;
 import de.itagile.golf.operation.Schlag;
+import de.itagile.golf.operation.UnbekannteOperation;
 
 @RunWith(Parameterized.class)
 public class EinfacherIntepreterTest {
@@ -33,6 +34,7 @@ public class EinfacherIntepreterTest {
 				{"Schlage Ball", Schlag.class},
 				{"Nächstes Loch", Lochwechsel.class},
 				{"Hilfe", Hilfe.class},
+				{"blablub", UnbekannteOperation.class},
 				};
 		return Arrays.asList(testData);
 	}
