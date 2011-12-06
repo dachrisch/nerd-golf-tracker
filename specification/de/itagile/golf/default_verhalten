@@ -2,4 +2,4 @@ Wenn ich eine leere Eingabe nur mit Enter mache,
 Dann zählt der NerdGolfTracker 1 Schlag.
 
 Wenn ich eine leere Eingabe nur mit Leerzeichen und Enter mache,
-Dann zählt der NerdGolfTracker 1 Schlag.
+Dann zählt der NerdGolfTracker 2 Schläge.

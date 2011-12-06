@@ -5,7 +5,6 @@ import java.util.Map;
 
 import de.itagile.golf.operation.UnbekannteOperation;
 
-
 public class EinfacherInterpreter implements Interpreter {
 
 	private Map<String, Operation> operationen = new HashMap<String, Operation>();
@@ -18,7 +17,7 @@ public class EinfacherInterpreter implements Interpreter {
 
 	@Override
 	public Operation interpretiere(String string) {
-		Operation operation = operationen.get(string);
+		Operation operation = operationen.get(string.trim());
 		if(null==operation) {
 			return new UnbekannteOperation();
 		}

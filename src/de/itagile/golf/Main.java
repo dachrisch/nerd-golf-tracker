@@ -9,6 +9,10 @@ import de.itagile.golf.operation.Startausgabe;
 
 public class Main {
 	
+	static {
+		System.setProperty("file.encoding", "UTF-8");
+	}
+	
 	public static void main(String[] args) throws IOException {
 		Startausgabe startoperation = new Startausgabe(new Lochausgabe());
 		Tracker tracker = new Tracker(new EinfacherInterpreter(), startoperation);
