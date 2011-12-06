@@ -66,7 +66,16 @@ public class TrackerDriver {
 	private void speichereAntwort() {
 		try {
 			letzteAntwort = reader.readLine();
-			eingabeaufforderung = reader.readLine();
+			StringBuffer sb = new StringBuffer();
+			char c = (char)reader.read();
+			sb.append(c);
+			while(c != ':') {
+				c = (char)reader.read();
+				sb.append(c);
+			}
+			c = (char)reader.read();
+			sb.append(c);
+			eingabeaufforderung = sb.toString();
 		} catch (IOException exception) {
 			throw new RuntimeException(exception);
 		}
