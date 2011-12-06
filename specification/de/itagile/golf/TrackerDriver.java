@@ -64,7 +64,7 @@ public class TrackerDriver {
 	}
 
 	
-	private void speichereAntwort() {
+	public void speichereAntwort() {
 		try {
 			letzteAntwort = reader.readLine();
 		} catch (IOException exception) {

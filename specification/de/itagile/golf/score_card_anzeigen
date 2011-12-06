@@ -1,0 +1,10 @@
+Wenn ich den Ball einmal schlage,
+Und ich den Ball noch einmal schlage,
+Und ich zum nächsten Loch gehe,
+Und ich den Ball einmal schlage,
+Und ich den Ball einmal schlage,
+Und ich den Ball einmal schlage,
+Und ich den ScoreCard-Befehl aufrufe,
+Dann zeigt der NerdGolfTracker die ScoreCard an
+Und listet "2" Schläge für Loch "1"
+Und listet "3" Schläge für Loch "2".

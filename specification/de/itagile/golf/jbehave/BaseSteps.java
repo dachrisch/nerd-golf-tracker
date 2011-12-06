@@ -25,6 +25,12 @@ public abstract class BaseSteps extends Steps {
 	public void assertThatAntwort(Matcher<String> matcher) {
 		assertThat(driver.letzteAntwort(), matcher);
 	}
+	
+	public void assertThatNaechsteAntwort(Matcher<String> matcher) {
+		driver.speichereAntwort();
+		assertThatAntwort(matcher);
+	}
+
 
 	public void assertThatEingabeaufforderung(Matcher<String> matcher) {
 		empfangeAnweisung("dummy read");
