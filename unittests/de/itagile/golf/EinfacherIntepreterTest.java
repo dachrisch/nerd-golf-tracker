@@ -15,6 +15,7 @@ import de.itagile.golf.operation.EndeOperation;
 import de.itagile.golf.operation.Hilfe;
 import de.itagile.golf.operation.Lochwechsel;
 import de.itagile.golf.operation.Schlag;
+import de.itagile.golf.operation.ScoreCardAnzeigen;
 import de.itagile.golf.operation.UnbekannteOperation;
 
 @RunWith(Parameterized.class)
@@ -39,6 +40,7 @@ public class EinfacherIntepreterTest {
 				{"    ", Schlag.class},
 				{"blablub", UnbekannteOperation.class},
 				{"Ende", EndeOperation.class},
+				{"Zeige ScoreCard", ScoreCardAnzeigen.class},
 				};
 		return Arrays.asList(testData);
 	}

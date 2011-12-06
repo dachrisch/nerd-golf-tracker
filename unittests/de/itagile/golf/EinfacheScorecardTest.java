@@ -40,4 +40,10 @@ public class EinfacheScorecardTest {
 		scorecard.schliesseLochAb();
 		assertThat(scorecard.aktuellesLoch(), is(2));
 	}
+
+	@Test
+	public void zeigtScoreCardNachEinemSchlag() throws Exception {
+		scorecard.erhoeheAnzahlSchlaege();
+		assertThat((Integer)((EinfacheScorecard)scorecard).getScoreCard().get(0), is(new Integer(1)));
+	}
 }

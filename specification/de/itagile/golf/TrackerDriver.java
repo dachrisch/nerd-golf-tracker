@@ -52,6 +52,7 @@ public class TrackerDriver {
 	public void empfangeAnweisung(String anweisung) {
 		writer.println(anweisung);
 		speichereAntwort();
+		
 	}
 	
 	public String letzteAntwort() {
@@ -66,6 +67,7 @@ public class TrackerDriver {
 	private void speichereAntwort() {
 		try {
 			letzteAntwort = reader.readLine();
+			
 			StringBuffer sb = new StringBuffer();
 			char c = (char)reader.read();
 			sb.append(c);
@@ -80,4 +82,6 @@ public class TrackerDriver {
 			throw new RuntimeException(exception);
 		}
 	}
+	
+	
 }
