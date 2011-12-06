@@ -18,10 +18,14 @@ public abstract class BaseSteps extends Steps {
 	}
 	
 	public void empfangeAnweisung(String anweisung) {
-		driver.empfangeAnweisung(anweisung);
+			driver.empfangeAnweisung(anweisung);
 	}
 
 	public void assertThatAntwort(Matcher<String> matcher) {
 		assertThat(driver.letzteAntwort(), matcher);
+	}
+	
+	public void assertThatEingabeaufforderung(Matcher<String> matcher) {
+		assertThat(driver.eingabeaufforderung(), matcher);
 	}
 }

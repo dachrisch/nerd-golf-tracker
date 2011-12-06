@@ -23,5 +23,6 @@ public class Main {
 
 	private static void gibtAus(String ausgabe) {
 		System.out.println(ausgabe);
+		System.out.println("Bitte Befehl eingeben: ");
 	}
 }

@@ -12,6 +12,7 @@ public class TrackerDriver {
 	private BufferedReader reader;
 	private PrintWriter writer;
 	private String letzteAntwort;
+	private String eingabeaufforderung;
 	
 	public TrackerDriver() {
 		process = startNerdGolfTracker();
@@ -56,10 +57,16 @@ public class TrackerDriver {
 	public String letzteAntwort() {
 		return letzteAntwort;
 	}
+	
+	public String eingabeaufforderung(){
+		return eingabeaufforderung;
+	}
 
+	
 	private void speichereAntwort() {
 		try {
 			letzteAntwort = reader.readLine();
+			eingabeaufforderung = reader.readLine();
 		} catch (IOException exception) {
 			throw new RuntimeException(exception);
 		}
