@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
+import de.itagile.golf.operation.EndeOperation;
 import de.itagile.golf.operation.Hilfe;
 import de.itagile.golf.operation.Lochwechsel;
 import de.itagile.golf.operation.Schlag;
@@ -37,6 +38,7 @@ public class EinfacherIntepreterTest {
 				{"", Schlag.class},
 				{"    ", Schlag.class},
 				{"blablub", UnbekannteOperation.class},
+				{"Ende", EndeOperation.class},
 				};
 		return Arrays.asList(testData);
 	}
