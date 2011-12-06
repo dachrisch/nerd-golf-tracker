@@ -50,6 +50,7 @@ public class TrackerDriver {
 	}
 
 	public void empfangeAnweisung(String anweisung) {
+		leseEingabeaufforderung();
 		writer.println(anweisung);
 		speichereAntwort();
 		
@@ -64,10 +65,16 @@ public class TrackerDriver {
 	}
 
 	
-	private void speichereAntwort() {
+	public void speichereAntwort() {
 		try {
 			letzteAntwort = reader.readLine();
-			
+		} catch (IOException exception) {
+			throw new RuntimeException(exception);
+		}
+	}
+
+	private void leseEingabeaufforderung() {
+		try {
 			StringBuffer sb = new StringBuffer();
 			char c = (char)reader.read();
 			sb.append(c);
@@ -78,8 +85,17 @@ public class TrackerDriver {
 			c = (char)reader.read();
 			sb.append(c);
 			eingabeaufforderung = sb.toString();
-		} catch (IOException exception) {
-			throw new RuntimeException(exception);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public ProcessStatus returnStatus() {
+		try {
+			process.exitValue();
+			return ProcessStatus.TERMINATED;
+		} catch (IllegalThreadStateException e) {
+			return ProcessStatus.RUNNING;
 		}
 	}
 	
